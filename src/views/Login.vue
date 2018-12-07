@@ -1,42 +1,34 @@
 <template>
-    <div>
-        <b-form @submit="onSubmit" >
-            <b-form-group id="exampleInputGroup1"
-                          label="Email address:"
-                          label-for="exampleInput1"
-                          description="We'll never share your email with anyone else.">
-                <b-form-input id="exampleInput1"
-                              type="email"
-                              required
-                              placeholder="Enter email">
-                </b-form-input>
-            </b-form-group>
-            <b-form-group id="exampleInputGroup2"
-                          label="Your Name:"
-                          label-for="exampleInput2">
-                <b-form-input id="exampleInput2"
-                              type="text"
-                              required
-                              placeholder="Enter name">
-                </b-form-input>
-            </b-form-group>
-            <b-form-group id="exampleInputGroup3"
-                          label="Food:"
-                          label-for="exampleInput3">
-                <b-form-select id="exampleInput3"
-                               :options="foods"
-                               required>
-                </b-form-select>
-            </b-form-group>
-            <b-form-group id="exampleGroup4">
-                <b-form-checkbox-group id="exampleChecks">
-                    <b-form-checkbox value="me">Check me out</b-form-checkbox>
-                    <b-form-checkbox value="that">Check that out</b-form-checkbox>
-                </b-form-checkbox-group>
-            </b-form-group>
-            <b-button type="submit" variant="primary">Submit</b-button>
-            <b-button type="reset" variant="danger">Reset</b-button>
-        </b-form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+                    <b-form-group label-text-align="left" label="Email:">
+                        <b-form-input id="exampleInput1"
+                                      type="email"
+                                      v-model="form.email"
+                                      required
+                                      placeholder="Enter email">
+                        </b-form-input>
+                    </b-form-group>
+                    <b-form-group label-text-align="left" label="Password:">
+                        <b-form-input id="exampleInput2"
+                                      type="password"
+                                      v-model="form.name"
+                                      required
+                                      placeholder="Enter password">
+                        </b-form-input>
+                    </b-form-group>
+                    <b-form-group id="exampleGroup4">
+                        <b-form-checkbox-group v-model="form.checked" id="exampleChecks">
+                            <b-form-checkbox value="me">Remember me</b-form-checkbox>
+                        </b-form-checkbox-group>
+                    </b-form-group>
+                    <b-button type="submit" variant="primary">Submit</b-button>
+                    <b-button type="reset" variant="danger">Reset</b-button>
+                </b-form>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -48,6 +40,34 @@
     })
 
     export default class Login extends Vue {
+
+        data() {
+            return {
+                form: {
+                    email: '',
+                    name: '',
+                    food: null,
+                    checked: []
+                },
+                foods: [
+                    {text: 'Select One', value: null},
+                    'Carrots', 'Beans', 'Tomatoes', 'Corn'
+                ],
+                show: true
+            };
+        }
+
+        show() {
+
+        }
+
+        onSubmit(event) {
+
+        }
+
+        onReset(event) {
+
+        }
 
     };
 </script>

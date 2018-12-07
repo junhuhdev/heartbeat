@@ -12,31 +12,11 @@ export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: Home,
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: Login,
-        },
-        {
-            path: '/profile',
-            name: 'profile',
-            component: Profile,
-        },
-        {
-            path: '/dashboard',
-            name: 'dashboard',
-            component: Dashboard,
-        },
-        {
-            path: '/tracker',
-            name: 'tracker',
-            component: Tracker,
-        },
+        {path: '/', name: 'home', component: Home},
+        {path: '/login', name: 'login', component: Login},
+        {path: '/profile', name: 'profile', component: Profile},
+        {path: '/dashboard', name: 'dashboard', component: Dashboard},
+        {path: '/tracker', name: 'tracker', component: Tracker},
         {
             path: '/about',
             name: 'about',

@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable="md" type="dark" variant="dark">
+    <b-navbar class="header" toggleable="md" type="dark" variant="dark">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-navbar-brand to="/">Heartbeat</b-navbar-brand>
         <b-collapse is-nav id="nav_collapse">
@@ -41,5 +41,12 @@
 </script>
 
 <style scoped>
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
 </style>
