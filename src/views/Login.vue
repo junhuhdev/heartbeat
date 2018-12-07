@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4">
+    <b-container fluid>
+        <b-form-row>
+            <b-col sm="2" offset-sm="5">
                 <b-form @submit="onSubmit" @reset="onReset" v-if="show">
                     <b-form-group label-text-align="left" label="Email:">
                         <b-form-input id="exampleInput1"
@@ -24,12 +24,11 @@
                             <b-form-checkbox value="me">Remember me</b-form-checkbox>
                         </b-form-checkbox-group>
                     </b-form-group>
-                    <b-button type="submit" variant="primary">Submit</b-button>
-                    <b-button type="reset" variant="danger">Reset</b-button>
+                    <b-button type="submit" variant="primary">Login</b-button>
                 </b-form>
-            </div>
-        </div>
-    </div>
+            </b-col>
+        </b-form-row>
+    </b-container>
 </template>
 
 <script lang="ts">
@@ -52,8 +51,7 @@
                 foods: [
                     {text: 'Select One', value: null},
                     'Carrots', 'Beans', 'Tomatoes', 'Corn'
-                ],
-                show: true
+                ]
             };
         }
 
