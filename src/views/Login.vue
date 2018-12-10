@@ -1,9 +1,9 @@
 <template>
     <b-container fluid>
         <b-form-row>
-            <b-col sm="2" offset-sm="5">
+            <b-col md="4" offset-sm="4">
                 <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-                    <b-form-group label-text-align="left" label="Email:">
+                    <b-form-group horizontal label-text-align="left" label="Email">
                         <b-form-input id="exampleInput1"
                                       type="email"
                                       v-model="form.email"
@@ -11,7 +11,7 @@
                                       placeholder="Enter email">
                         </b-form-input>
                     </b-form-group>
-                    <b-form-group label-text-align="left" label="Password:">
+                    <b-form-group horizontal label-text-align="left" label="Password">
                         <b-form-input id="exampleInput2"
                                       type="password"
                                       v-model="form.name"
@@ -19,6 +19,7 @@
                                       placeholder="Enter password">
                         </b-form-input>
                     </b-form-group>
+                    <br>
                     <b-form-group id="exampleGroup4">
                         <b-form-checkbox-group v-model="form.checked" id="exampleChecks">
                             <b-form-checkbox value="me">Remember me</b-form-checkbox>
