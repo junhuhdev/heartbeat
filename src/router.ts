@@ -5,6 +5,7 @@ import Login from './views/Login.vue';
 import Profile from './views/Profile.vue';
 import Tracker from './views/Tracker.vue';
 import Dashboard from './views/Dashboard.vue';
+import Daily from './views/Daily.vue';
 
 Vue.use(Router);
 
@@ -17,6 +18,7 @@ export default new Router({
         {path: '/profile', name: 'profile', component: Profile},
         {path: '/dashboard', name: 'dashboard', component: Dashboard},
         {path: '/tracker', name: 'tracker', component: Tracker},
+        {path: '/daily', name: 'daily', component: Daily},
         {
             path: '/about',
             name: 'about',

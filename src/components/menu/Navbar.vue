@@ -1,11 +1,12 @@
 <template>
     <b-navbar class="header" toggleable="md" type="dark" variant="dark">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-        <b-navbar-brand to="/">Heartbeat</b-navbar-brand>
+        <b-navbar-brand to="/"><span class="logo" style="font-size: 1em; color: Tomato;"><i class="fas fa-heartbeat"></i></span> Heartbeat</b-navbar-brand>
         <b-collapse is-nav id="nav_collapse">
 
             <b-navbar-nav>
                 <b-nav-item to="login">Login</b-nav-item>
+                <b-nav-item to="daily">Daily</b-nav-item>
                 <b-nav-item to="profile">Profile</b-nav-item>
                 <b-nav-item to="tracker">Tracker</b-nav-item>
                 <b-nav-item to="dashboard">Dashboard</b-nav-item>
@@ -41,6 +42,10 @@
 </script>
 
 <style scoped>
+
+    .logo {
+        margin-right: 5px;
+    }
 
     .header {
         position: fixed;
