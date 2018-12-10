@@ -1,7 +1,7 @@
 <template>
     <b-container fluid>
         <b-form-row>
-            <b-col md="4" offset-sm="4">
+            <b-col md="4" offset-md="4">
                 <b-form @submit="onSubmit" @reset="onReset" v-if="show">
                     <b-form-group horizontal label-text-align="left" label="Email">
                         <b-form-input id="exampleInput1"

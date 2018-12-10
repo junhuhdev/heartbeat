@@ -1,7 +1,7 @@
 <template>
     <b-container>
         <b-form-row>
-            <b-col md="4" offset-sm="4">
+            <b-col md="6" offset-md="3">
                 <b-form>
                     <b-form-group horizontal label-text-align="left" label="Date">
                         <datepicker v-model="date" name="uniquename"></datepicker>
@@ -10,7 +10,7 @@
                     <b-form-group horizontal label-text-align="left" label="Mood">
                         <b-form-input id="mood"
                                       type="range"
-                                      v-model="range"
+                                      v-model="mood"
                                       required>
                         </b-form-input>
                     </b-form-group>
@@ -32,9 +32,11 @@
                     </b-form-group>
 
                     <b-form-group horizontal label-text-align="left" label="Medication">
+                        <v-select :options="medication"></v-select>
                     </b-form-group>
 
                     <b-form-group horizontal label-text-align="left" label="Supplementation">
+                        <v-select :options="supplementation"></v-select>
                     </b-form-group>
 
                     <b-form-group horizontal label-text-align="left" label="Notes">
@@ -71,6 +73,8 @@
                 mood: 0,
                 motivation: 0,
                 energy: 0,
+                medication: ['attentin', 'modafinil'],
+                supplementation: ['vitamin-c', 'vitamin-d'],
             };
         }
 
