@@ -47,7 +47,7 @@
                                          :max-rows="6">
                         </b-form-textarea>
                     </b-form-group>
-
+                    <b-button type="submit" variant="primary">Create</b-button>
                 </b-form>
             </b-col>
         </b-form-row>
